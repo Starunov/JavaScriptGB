@@ -24,8 +24,8 @@
   <script>
     "use strict";
 
-    const degreesCel = prompt("Введите температуру в °C");
-    const degreesFar = (9 / 5) * degreesCel + 32;
+    const degreesCel = +prompt("Введите температуру в °C");
+    const degreesFar = (9 / 5) * 10 * degreesCel / 10 + 32;
     alert(`Цельсий: ${degreesCel}, Фаренгейт: ${degreesFar}`);
   </script>
 </body>
