@@ -75,19 +75,13 @@ Infinity делать не нужно, однако, в случае если б
     }
 
     /**
-     * Принимает на вход два числа и математический оператор ['+' || '-' || '*' || '/']
+     * Принимает на вход два числа и оператор ['+' || '-' || '*' || '/']
      * @param {number} arg1 - первое число
      * @param {number} arg2 - второе число
      * @param {string} operation - оператор
      * @return {number} Результат вычисления
      */
     function mathOperation(arg1, arg2, operation) {
-      const signsArray = ['+', '-', '*', '/'];
-
-      if (!signsArray.includes(operation)) {
-        return NaN;
-      }
-
       switch (operation) {
         case '+':
           return getSumNumbers(arg1, arg2);
@@ -98,6 +92,7 @@ Infinity делать не нужно, однако, в случае если б
         case '/':
           return getDivNumbers(arg1, arg2);
       }
+      return NaN;
     }
 
     console.log(mathOperation(5, 3, '+'));
